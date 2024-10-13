@@ -21,3 +21,8 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
+
+// Home page route (this handles GET requests to "/")
+app.get('/', (req, res)=>{
+    res.send('<h1>Welcome to My Website</h1><p>This is the home page for Vercel!</p>');
+});
